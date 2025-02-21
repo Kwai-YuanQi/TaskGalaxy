@@ -136,7 +136,7 @@ def gpt4o_process_(inp):
     print(answer)
     if answer is not None:
         for ans in answer.split('\n'):
-            p = '/TaskGalaxy/DatasetPipeline/TaskType'
+            p = '/TaskGalaxy/DatasetPipeline/Step1/TaskType'
             if '~' in ans:
                 ans.lower()
                 lines = ans.split('~')
@@ -279,4 +279,4 @@ def run_caption(input_dir, task_num):
 
 if __name__ == "__main__":
     for i in range(1):
-        run_caption('/TaskGalaxy/DatasetPipeline/Tasktype', 3)
+        run_caption('/TaskGalaxy/DatasetPipeline/Step1/Tasktype', 3)
