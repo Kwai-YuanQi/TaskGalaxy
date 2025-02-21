@@ -24,10 +24,10 @@ model.eval()
 
 
 
-output_file_image_task_type = open('TaskGalaxy/Dataset/task_related_dataset.json','w')
-task_embedding = open('TaskGalaxy/Dataset/task_embedding.json','w')
+output_file_image_task_type = open('TaskGalaxy/DatasetPipeline/Step3/Dataset/task_related_dataset.json','w')
+task_embedding = open('TaskGalaxy/DatasetPipeline/Step3/Dataset/task_embedding.json','w')
 
-task_file = open('TaskGalaxy/Dataset/task_all.txt', 'r')#所有任务类型
+task_file = open('TaskGalaxy/DatasetPipeline/Step3/Dataset/task_all.txt', 'r')#所有任务类型
 tasks = task_file.read().splitlines()
 将所有的task_type通过clip的text_encoder得到相应的embedding保存在json文件中
 for task in tqdm(tasks):
@@ -40,7 +40,7 @@ for task in tqdm(tasks):
     task_embedding.flush()
 
 
-all_image_path = os.listdir('TaskGalaxy/Dataset/images')#列出所有图像路径
+all_image_path = os.listdir('TaskGalaxy/DatasetPipeline/Step3/Dataset/images')#列出所有图像路径
 Image_path = []
 for image_path in all_image_path:
     if '.py' in image_path or '.json' in image_path:
@@ -49,7 +49,7 @@ for image_path in all_image_path:
 # print(Image_path)
 
 #获取所有文本的embedding
-task_embedding = open('TaskGalaxy/Dataset/task_embedding.json','r')
+task_embedding = open('TaskGalaxy/DatasetPipeline/Step3/Dataset/task_embedding.json','r')
 task_data = []
 task_type = []
 for line in task_embedding:
@@ -59,9 +59,9 @@ for line in task_embedding:
 task_data = np.array(task_data)
 task_data = torch.from_numpy(task_data).float().to('cuda:0')
 for each_image_folder in tqdm(Image_path):##视图像数据集的目录形式[有多少级]而定
-    each_all_image_path = os.listdir(os.path.join('TaskGalaxy/Dataset/images', each_image_folder))
+    each_all_image_path = os.listdir(os.path.join('TaskGalaxy/DatasetPipeline/Step3/Dataset/images', each_image_folder))
     for image_pa in tqdm(each_all_image_path):
-        image_path = os.path.join('TaskGalaxy/Dataset/images',each_image_folder,image_pa)
+        image_path = os.path.join('TaskGalaxy/DatasetPipeline/Step3/Dataset/images',each_image_folder,image_pa)
         try:
             # image = preprocess(Image.open(image_path)).unsqueeze(0).to(device)
             image = preprocess(Image.open(image_path)).unsqueeze(0).to(device)
