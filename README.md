@@ -42,7 +42,7 @@ Multimodal visual language models are gaining prominence in open-world appli- ca
     - `a_sharegpt4v_data/web-landmark_images`
     - `a_sharegpt4v_data/wikiart_images`
 
-## Dataset Generation Introduce
+## Dataset Generation Introduction
 
 ### Step 1: Task Type Generation
 Run the `hierarchical_task_type_generation.py` script to generate a hierarchical task structure using GPT-4. The main directory will be labeled as `Tasktype`. To extract the specific task types, run the `create_task_txt.py` script. This will save the hierarchical task types in the `tasktype.txt` file, with each task type represented in a hierarchical format, separated by the `~` symbol.
