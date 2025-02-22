@@ -41,3 +41,43 @@ Multimodal visual language models are gaining prominence in open-world appli- ca
     - `a_sharegpt4v_data/web-celeberity_images`
     - `a_sharegpt4v_data/web-landmark_images`
     - `a_sharegpt4v_data/wikiart_images`
+
+## Dataset Generation Introduce
+
+### Step 1: Task Type Generation
+Run the `hierarchical_task_type_generation.py` script to generate a hierarchical task structure using GPT-4. The main directory will be labeled as `Tasktype`. To extract the specific task types, run the `create_task_txt.py` script. This will save the hierarchical task types in the `tasktype.txt` file, with each task type represented in a hierarchical format, separated by the `~` symbol.
+
+```bash
+python hierarchical_task_type_generation.py
+python create_task_txt.py
+```
+### Step 2: Image Collection
+Follow the image collection process as described in the Image Collection section above.
+
+### Step 3: Task Type Matching and Filtering
+First, run the clip_match.py script to match each image with its corresponding task type. To further refine the task types and ensure they match the image content more closely, run the gpt4o_filter.py script to filter out non-matching task types. Finally, execute the prepare_forstep4.py script to adjust the file format for question-answer generation in Step 4.
+
+```bash
+python clip_match.py
+python gpt4o_filter.py
+python prepare_forstep4.py
+```
+
+### Step 4: Question-Answer Generation
+Run the gpt4o_qagenerate.py script to generate questions and answers for each task type associated with the images. Afterward, run the prepare_forstep5.py script to adjust the file format for the quality filtering process in Step 5.
+
+```bash
+python gpt4o_qagenerate.py
+python prepare_forstep5.py
+```
+
+### Step 5: Quality Scoring and Final Selection
+Use three open-source models to score the question-answer pairs for each task type and its corresponding image. Run the respective .py scripts for each model to obtain the scores. After scoring, execute the highdata_generate.py script to aggregate the scores and select samples with a score greater than or equal to 2 as the final samples for TaskGalaxy. Finally, run the change_style_forllava.py script to adjust the format of the selected samples to match the LLava fine-tuning data format.
+
+```bash
+python model1.py
+python model2.py
+python model3.py
+python highdata_generate.py
+python change_style_forllava.py
+```
