@@ -75,9 +75,9 @@ python prepare_forstep5.py
 Use three open-source models to score the question-answer pairs for each task type and its corresponding image. Run the respective .py scripts for each model to obtain the scores. After scoring, execute the highdata_generate.py script to aggregate the scores and select samples with a score greater than or equal to 2 as the final samples for TaskGalaxy. Finally, run the change_style_forllava.py script to adjust the format of the selected samples to match the LLava fine-tuning data format.
 
 ```bash
-python model1.py
-python model2.py
-python model3.py
+python infer_glm4v_score_1.py
+python infer_internVL_score_1.py
+python infer_internVL2_26B_score_1.py
 python highdata_generate.py
 python change_style_forllava.py
 ```
