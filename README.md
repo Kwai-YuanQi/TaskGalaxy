@@ -34,7 +34,7 @@ Multimodal visual language models are gaining prominence in open-world appli- ca
   - [COCO 2017 Train Images](http://images.cocodataset.org/zips/train2017.zip)
 - Additional datasets (download links available in the main file):
   - `a_sharegpt4v_data/sam_images`: [Link in `sam_images/sampath.sh`](https://ai.meta.com/datasets/segment-anything-downloads/)
-  - For the following datasets, please refer to the [TaskGalaxy Dataset on Hugging Face](https://huggingface.co/datasets/CverCJK-huggingface/TaskGalaxy/):
+  - For the following datasets and TaskGalaxy dataset, please refer to the [TaskGalaxy Dataset on Hugging Face](https://huggingface.co/datasets/CverCJK-huggingface/TaskGalaxy/):
     - `a_sharegpt4v_data/ocr_vqa_images`
     - `a_sharegpt4v_data/share_textvqa_images`
     - `a_sharegpt4v_data/text_vqa_train_images`
