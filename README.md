@@ -8,3 +8,36 @@ Multimodal visual language models are gaining prominence in open-world appli- ca
 ![Alt text](Pipeline/taskgalaxy_pipeline.png)
 
 ## Image Collection
+# Images Download Links
+## MathV360K
+- [MathV360K Dataset](https://huggingface.co/datasets/Zhiqiang007/MathV360K)
+- Download: `data_images.zip`
+- Path: `a_math_related/`
+
+## ALLAVA
+- Main file contains the following download commands:
+  - `download_laion.sh`
+  - `download_vflan.sh`
+- Downloaded paths:
+  - `allava_laion/images`
+  - `allava_vflan/images_vflan`
+
+## VG (Visual Genome)
+- [VG_100K_2 Images (1)](https://cs.stanford.edu/people/rak248/VG_100K_2/images.zip)
+- [VG_100K_2 Images (2)](https://cs.stanford.edu/people/rak248/VG_100K_2/images2.zip)
+- Download paths:
+  - `a_visual_genome/VG_100K`
+  - `a_visual_genome/VG_100K_2`
+
+## shareGPT4V
+- Path: `a_sharegpt4v_data/coco_train2017`
+  - [COCO 2017 Train Images](http://images.cocodataset.org/zips/train2017.zip)
+- Additional datasets (download links available in the main file):
+  - `a_sharegpt4v_data/sam_images`: [Link in `sam_images/sampath.sh`](https://ai.meta.com/datasets/segment-anything-downloads/)
+  - For the following datasets, please refer to the [TaskGalaxy Dataset on Hugging Face](https://huggingface.co/datasets/CverCJK-huggingface/TaskGalaxy/):
+    - `a_sharegpt4v_data/ocr_vqa_images`
+    - `a_sharegpt4v_data/share_textvqa_images`
+    - `a_sharegpt4v_data/text_vqa_train_images`
+    - `a_sharegpt4v_data/web-celeberity_images`
+    - `a_sharegpt4v_data/web-landmark_images`
+    - `a_sharegpt4v_data/wikiart_images`
