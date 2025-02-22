@@ -7,3 +7,4 @@ Multimodal visual language models are gaining prominence in open-world appli- ca
 ## Data Pipeline
 ![Alt text](/home/2022/jiankang/Storage/Mycode/TaskGalaxy/Pipeline/taskgalaxy_pipeline.png)
 
+## Image Collection
