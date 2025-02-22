@@ -8,13 +8,13 @@ Multimodal visual language models are gaining prominence in open-world appli- ca
 ![Alt text](Pipeline/taskgalaxy_pipeline.png)
 
 ## Image Collection
-# Images Download Links
-## MathV360K
+### Images Download Links
+#### MathV360K
 - [MathV360K Dataset](https://huggingface.co/datasets/Zhiqiang007/MathV360K)
 - Download: `data_images.zip`
 - Path: `a_math_related/`
 
-## ALLAVA
+#### ALLAVA
 - Main file contains the following download commands:
   - `download_laion.sh`
   - `download_vflan.sh`
@@ -22,14 +22,14 @@ Multimodal visual language models are gaining prominence in open-world appli- ca
   - `allava_laion/images`
   - `allava_vflan/images_vflan`
 
-## VG (Visual Genome)
+#### VG (Visual Genome)
 - [VG_100K_2 Images (1)](https://cs.stanford.edu/people/rak248/VG_100K_2/images.zip)
 - [VG_100K_2 Images (2)](https://cs.stanford.edu/people/rak248/VG_100K_2/images2.zip)
 - Download paths:
   - `a_visual_genome/VG_100K`
   - `a_visual_genome/VG_100K_2`
 
-## shareGPT4V
+#### shareGPT4V
 - Path: `a_sharegpt4v_data/coco_train2017`
   - [COCO 2017 Train Images](http://images.cocodataset.org/zips/train2017.zip)
 - Additional datasets (download links available in the main file):
