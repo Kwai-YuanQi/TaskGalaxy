@@ -6,6 +6,7 @@ Multimodal visual language models are gaining prominence in open-world appli- ca
 
 ## Data Pipeline
 ![Alt text](Pipeline/taskgalaxy_pipeline.png)
+- [TaskGalaxy Dataset Download](https://huggingface.co/datasets/CverCJK-huggingface/TaskGalaxy)
 
 ## Image Collection
 ### Images Download Links
