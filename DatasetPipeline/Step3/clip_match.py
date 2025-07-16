@@ -8,6 +8,7 @@ import clip
 import numpy as np
 import torch.nn.functional as F
 import datasets
+import heapq
 
 def top_k_indices_and_values(lst, k): #返回列表中的前k大的值及其索引
     # 使用 heapq.nlargest 找到前 k 大的元素及其索引
